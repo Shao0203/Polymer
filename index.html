@@ -4,16 +4,106 @@
 	<meta charset="UTF-8">
 	<title>Polymer 0.5</title>
 	<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-	<link rel="import" href="elements/hello-world.html">
-
-	<style>
-		hello-world::shadow h1 {
-			color:#333;
-		}
-	</style>
-</head>
-<body>
-	<hello-world></hello-world>
+	<link rel="import" href="bower_components/core-tooltip/core-tooltip.html">
+	<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+	<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+	<link rel="import" href="bower_components/core-icons/core-icons.html">
+	<link rel="import" href="bower_components/core-icons/social-icons.html">
+	<link rel="import" href="bower_components/paper-elements/paper-elements.html">
+<style>
+	core-toolbar {
+		background: #333;
+		color: #fff;
+	}
+	core-icon[icon="polymer"] {
+		color: blue;
+		height: 100px;
+		width: 100px;
+	}
+	.example {
+		background: #333;
+		padding: 10px;
+	}
+	.example div {
+		background: #eee;
+		margin: 10px;
+	}
 	
+	paper-button {
+		background: #3f51b5;
+		color: #fff;
+	}
+	
+	paper-tabs {
+		color: #3f51b5;
+	}
+
+	paper-tabs::shadow #selectionBar {
+	  background-color: #ff4081;
+	}
+	paper-tabs paper-tab::shadow #ink {
+	  color: #ff4081;
+	}
+	
+	.span-shadow {
+		display: inline-block;
+		padding: 8px;
+	}		
+</style>
+</head>
+<body fullbleed layout vertical>
+	<core-header-panel flex>
+		<core-toolbar>
+			<div>Toolbar</div>
+		</core-toolbar>
+		<p>Hello Hello Hello Hello Hello </p>
+		<div class="example" layout horizontal>
+			<div flex three>One</div>
+			<div flex two>Tow</div>
+			<div flex one>Three</div>
+		</div>
+		
+		<paper-checkbox></paper-checkbox>
+		<paper-checkbox checked></paper-checkbox>
+		<paper-button>button</paper-button>
+		<paper-button raised>raised button</paper-button>
+		<paper-button noink>No ripple effect</paper-button>
+
+		<paper-tabs selected="0">
+		  <paper-tab>TAB 1</paper-tab>
+		  <paper-tab>TAB 2</paper-tab>
+		  <paper-tab>TAB 3</paper-tab>
+		</paper-tabs>
+
+		<paper-tabs selected="0" link>
+		  <paper-tab>
+		    <a href="#link1" horizontal center-center layout>TAB ONE</a>
+		  </paper-tab>
+		  <paper-tab>
+		    <a href="#link2" horizontal center-center layout>TAB TWO</a>
+		  </paper-tab>
+		  <paper-tab>
+		    <a href="#link3" horizontal center-center layout>TAB THREE</a>
+		  </paper-tab>
+		</paper-tabs>
+	
+		<paper-shadow z="3" class="span-shadow">
+		  <span>I have a shadow!</span>
+		</paper-shadow>
+
+	
+	</core-header-panel>
+	
+<!--
+		<div>
+		  <paper-ripple fit></paper-ripple>
+		</div>
+	<core-icon icon="polymer"></core-icon>
+	<core-icon icon="android"></core-icon>
+	<core-icon icon="social:cake"></core-icon>
+ 	<core-tooltip label="I'am Bright">
+		<span>Bright is here.</span>
+	</core-tooltip>
+-->
 </body>
 </html>
