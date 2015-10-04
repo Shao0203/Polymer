@@ -1,0 +1,21 @@
+{
+  "name": "polymer05",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Shao0203/polymer05",
+  "authors": [
+    "Shao <nzsyl0203@gmail.com>"
+  ],
+  "description": "polymer 0.5",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#0.5"
+  }
+}

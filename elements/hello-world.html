@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="hello-world" attributes="name">
+	<template>
+	<style>
+		h1 {
+			font-family: sans-serif;
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+		}
+	</style>
+	<ul>
+		<template repeat="{{ name in names }}">
+			<li>Hello {{name.name}}</li>
+		</template>
+	</ul>
+	</template>
+	<script>
+		Polymer ('hello-world',{
+			ready: function() {
+				this.names = [
+					{
+						name: 'World'
+					},{
+						name: 'Bright'
+					},{
+						name: 'Shao'
+					}
+				]
+			}
+		})
+	</script>
+</polymer-element>
+
+
+
