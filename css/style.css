@@ -1,0 +1,45 @@
+body {
+	padding-top: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar-inverse input[type="text"] {
+	background: #313131;
+	border: none;
+	color: #999;
+}
+
+.navbar-inverse .navbar-form {
+	position: relative;
+}
+
+.navbar-inverse button[type="submit"] {
+	position: absolute;
+	top: 25%;
+	right: 20px;
+	background: none;
+	border: none;
+}
+
+.footer {
+	margin: 30px 0 10px 0;
+	border-top: 1px solid #ccc;
+	padding-top: 10px;
+}
+.footer h4 > a:hover {
+	text-decoration: none;
+}
+
+
+@media(min-width: 768px) {
+	.navbar-inverse button[type="submit"] {
+		top: 15%;
+	}
+}
+
+.navbar-inverse .glyphicon {
+	color: #999;
+}

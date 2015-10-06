@@ -2,108 +2,283 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Polymer 0.5</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-	<link rel="import" href="bower_components/core-tooltip/core-tooltip.html">
-	<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
-	<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
-	<link rel="import" href="bower_components/core-icons/core-icons.html">
-	<link rel="import" href="bower_components/core-icons/social-icons.html">
 	<link rel="import" href="bower_components/paper-elements/paper-elements.html">
-<style>
-	core-toolbar {
-		background: #333;
-		color: #fff;
-	}
-	core-icon[icon="polymer"] {
-		color: blue;
-		height: 100px;
-		width: 100px;
-	}
-	.example {
-		background: #333;
-		padding: 10px;
-	}
-	.example div {
-		background: #eee;
-		margin: 10px;
-	}
-	
-	paper-button {
-		background: #3f51b5;
-		color: #fff;
-	}
-	
-	paper-tabs {
-		color: #3f51b5;
-	}
 
-	paper-tabs::shadow #selectionBar {
-	  background-color: #ff4081;
-	}
-	paper-tabs paper-tab::shadow #ink {
-	  color: #ff4081;
-	}
-	
-	.span-shadow {
-		display: inline-block;
-		padding: 8px;
-	}		
-</style>
+	<title>WelTec SoIT</title>
 </head>
-<body fullbleed layout vertical>
-	<core-header-panel flex>
-		<core-toolbar>
-			<div>Toolbar</div>
-		</core-toolbar>
-		<p>Hello Hello Hello Hello Hello </p>
-		<div class="example" layout horizontal>
-			<div flex three>One</div>
-			<div flex two>Tow</div>
-			<div flex one>Three</div>
+<body>
+	<!-- navigation start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top"> <!-- navbar-static-top -->
+		<div class="container">
+			<!-- navbar btn start -->
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a target="_blank" href="http://www.weltec.ac.nz" class="navbar-brand">
+				<strong>WelTec</strong>
+				</a>
+			</div>
+			<!-- navbar btn end -->
+			<div class="collapse navbar-collapse" id="responsive-navbar">
+				<ul class="nav navbar-nav">
+					<li><a href="###">Student</a></li>
+					<li><a href="###">Tutor</a></li>
+					<li><a href="###">Guest</a></li>
+				</ul>
+				<!-- search bar start -->
+				<form action="" class="navbar-form navbar-left">
+					<input type="text" name="search" id="" class="form-control" placeholder="Search">
+					<button type="submit">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</form>
+				<!-- search bar end -->
+				<a href="#" class="btn btn-primary navbar-btn navbar-right" data-toggle="modal" data-target="#test-modal">Test Engine</a>
+				<div class="navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a href="#" data-toggle="modal" data-target="#login-modal">Log In</a></li>
+						<!-- href="login-form.html" -->
+						<!-- <li><a href="#" data-toggle="modal" data-target="#signup-modal">Sign Up</a></li> -->
+					</ul>
+					<!-- <p class="navbar-text"><a href="#" class="navbar-link">My account</a></p> -->
+				</div>
+			</div>
 		</div>
-		
-		<paper-checkbox></paper-checkbox>
-		<paper-checkbox checked></paper-checkbox>
-		<paper-button>button</paper-button>
-		<paper-button raised>raised button</paper-button>
-		<paper-button noink>No ripple effect</paper-button>
+	</nav>
+	<!-- navigation end -->
 
-		<paper-tabs selected="0">
-		  <paper-tab>TAB 1</paper-tab>
-		  <paper-tab>TAB 2</paper-tab>
-		  <paper-tab>TAB 3</paper-tab>
-		</paper-tabs>
-
-		<paper-tabs selected="0" link>
-		  <paper-tab>
-		    <a href="#link1" horizontal center-center layout>TAB ONE</a>
-		  </paper-tab>
-		  <paper-tab>
-		    <a href="#link2" horizontal center-center layout>TAB TWO</a>
-		  </paper-tab>
-		  <paper-tab>
-		    <a href="#link3" horizontal center-center layout>TAB THREE</a>
-		  </paper-tab>
-		</paper-tabs>
-	
-		<paper-shadow z="3" class="span-shadow">
-		  <span>I have a shadow!</span>
-		</paper-shadow>
-
-	
-	</core-header-panel>
-	
-<!--
-		<div>
-		  <paper-ripple fit></paper-ripple>
+	<!-- Carousel start -->
+	<div class="carousel slide" id="slideshow" data-ride="carousel" >
+		<!-- slideshow content start -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="images/21.jpg" alt="">
+				<div class="carousel-caption">
+					<h2>Grab our prospectus</h2>
+				</div>					
+			</div>
+			<div class="item">
+				<img src="images/22.jpg" alt="">
+				<div class="carousel-caption">
+					<h2>Summer at WelTec</h2>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/23.jpg" alt="">
+				<div class="carousel-caption">
+					<h2>Scholarships</h2>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/24.jpg" alt="">
+				<div class="carousel-caption">
+					<h2>Free computing course</h2>
+				</div>
+			</div>
 		</div>
-	<core-icon icon="polymer"></core-icon>
-	<core-icon icon="android"></core-icon>
-	<core-icon icon="social:cake"></core-icon>
- 	<core-tooltip label="I'am Bright">
-		<span>Bright is here.</span>
-	</core-tooltip>
--->
+		<!-- slideshow content end -->
+		<!-- indicators start -->
+		<ol class="carousel-indicators">
+			<li data-target="#slideshow" data-slide-to="0" class="active"></li>
+			<li data-target="#slideshow" data-slide-to="1"></li>
+			<li data-target="#slideshow" data-slide-to="2"></li>
+			<li data-target="#slideshow" data-slide-to="3"></li>
+		</ol>
+		<!-- indicators end -->
+		<!-- control left/right icon start -->
+		<a href="#slideshow" data-slide="prev" class="left carousel-control">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a href="#slideshow" data-slide="next" class="right carousel-control">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+		<!-- control left/right icon end -->
+	</div>
+	<!-- Carousel end -->
+
+	<!-- Dialog start -->
+	<div class="modal fade" id="login-modal" tabindex="-1"> <!-- data-backdrop="false" data-remote="login-form.html" -->
+		<div class="modal-dialog"> <!-- modal-sm -->
+			<div class="modal-content">
+				<!-- remote login-form.html start-->
+				<div class="modal-header">
+					<div class="close" data-dismiss="modal">&times;</div>
+					<h4>User Log In </h4>
+				</div>
+				<div class="modal-body">
+					<form action="" role="form">
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" class="form-control" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" name="password" id="password" class="form-control" placeholder="Passowrd">
+						</div>			
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary login">Log in</button>
+				</div>
+				<!-- remote login-form.html end-->
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="test-modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="close" data-dismiss="modal">&times;</div>
+					<h4>Login Test Engine</h4>
+				</div>
+				<div class="modal-body">
+					<form action="" role="form">
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" class="form-control" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" name="password" id="password" class="form-control" placeholder="Passowrd">
+						</div>			
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary login-test">Log in</button>
+				</div>
+				<!-- remote login-form.html end-->
+			</div>
+		</div>
+	</div>
+	<!-- Dialog end -->
+
+	<!-- IT School start -->
+	<div class="container">
+	<h1 class="text-center page-header text-muted">Welcome to School of IT</h1>
+		<div class="row">			
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w1.png" alt="w1"></a>
+					<h3 class="text-left">Information Assurance&amp;Security</h3>
+					<p class="text-left">You can login the Information Assurance &amp; Security to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w2.png" alt="w1"></a>
+					<h3 class="text-left">Networking Major</h3>
+					<p class="text-left">You can login the Networking Major to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w3.png" alt="w1"></a>
+					<h3 class="text-left">Information Technology</h3>
+					<p class="text-left">You can login the Networking Major to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w4.png" alt="w1"></a>
+					<h3 class="text-left">Network Administration</h3>
+					<p class="text-left">You can login the Network Administration to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w5.png" alt="w1"></a>
+					<h3 class="text-left">Computer Servicing Level 5</h3>
+					<p class="text-left">You can login the Computer Servicing to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w6.png" alt="w1"></a>
+					<h3 class="text-left">Computing Level 4</h3>
+					<p class="text-left">You can login the Computing Level 4 to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w7.jpg" alt="w1"></a>
+					<h3 class="text-left">Training Videos </h3>
+					<p class="text-left">You can login the Training Videos to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w8.jpg" alt="w1"></a>
+					<h3 class="text-left">Connect to the Wireless</h3>
+					<p class="text-left">You can connect to the wireless to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w9.png" alt="w1"></a>
+					<h3 class="text-left">Get a Licence Key</h3>
+					<p class="text-left">You can login to get a Licence Key to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w10.jpg" alt="w1"></a>
+					<h3 class="text-left">Handbooks</h3>
+					<p class="text-left">You can login to the Handbooks system to browser the resources.</p>
+				</section>				
+			</div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w11.jpg" alt="w1"></a>
+					<h3 class="text-left">Timetables</h3>
+					<p class="text-left">You can login to the Timetables system to check your courses schedule.</p>
+				</section>				
+			</div>
+			<div class="col-sm-4">
+				<section class="thumbnail">
+					<a href="#" data-toggle="modal" data-target="#login-modal">
+					<img class="img-rounded lazy" src="images/w12.jpg" alt="w1"></a>
+					<h3 class="text-left">Google Classroom</h3>
+					<p class="text-left">You can login the Google Classroom to browser the resources.</p>
+				</section>				
+			</div>
+		</div>
+	</div>
+	<!-- IT School end -->
+
+	<!-- footer with copyright start -->
+	<footer class="footer">
+		<section class="container">
+			<h4 class="text-center text-muted">Designed by <a href="mailto:nzsyl0203@gmail.com" class="text-muted">Bright</a>. &copy; WelTec 2015</h4>
+		</section>
+	</footer>
+	<!-- footer with copyright end -->
+
+
+	<script src="lib/jquery-2.1.4.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/holder.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
