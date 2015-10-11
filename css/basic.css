@@ -35,6 +35,9 @@ table th, table td{
 	text-align: center;
 }
 
+table td.tutor {
+	color: #aaa;
+}
 .footer {
 	border-top: 1px solid #e5e5e5;
 	padding-top: 5px;

@@ -4,6 +4,7 @@ $(function() {
 		window.location="exams.html";
 	});
 
+
 	$(document).on('keydown', function(e) {
 		//console.log(e.which); //left:37, right:39
 		switch (e.which) {
