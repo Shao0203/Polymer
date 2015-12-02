@@ -383,6 +383,117 @@
 // alert(pox.run());
 
 
+// function Table() {
+// 	// this.name = 'table';
+// 	this.size = 20;
+// 	this.run = function () {
+// 		return this.name + this.size;
+// 	};
+// }
+
+// function Desk() {
+// 	// this.name = 'desk';
+// 	this.price = 100;
+// 	this.check = function () {
+// 		return "this is a desk";
+// 	};
+// }
+// Table.prototype.name = 'shao';
+// Desk.prototype = new Table();
+
+// var table = new Table();
+// var desk = new Desk();
+// alert(table.name + ' | ' + table.size + " | " + table.run());
+// alert(desk.name + ' | ' + desk.price + ' | ' + desk.check());
+// alert(table instanceof Table);
+// alert(table instanceof Desk);
+// alert(table instanceof Object);
+// alert(desk instanceof Table);
+// alert(desk instanceof Desk);
+// alert(desk instanceof Object);
+
+function Table(age) {
+	this.name = ['aa','bb','cc'];
+	this.age = age;
+	Table.prototype.size = 222;
+}
+
+function Desk(para1) {
+	Table.call(this,para1);
+}
+
+
+// var table = new Table(500);
+// alert(table.name +' | '+table.age+' | '+table.size);
+
+// var desk = new Desk(200);
+// desk.name.push('dd');
+// alert(desk.name + ' | '+desk.age+ ' | '+desk.size);
+
+// function Table(name) {
+// 	this.name = name;
+// }
+
+// function Desk(age) {
+// 	this.age = age;
+// }
+
+// Desk.prototype = new Table('cc');
+
+// var table = new Table(22);
+// alert(table.name);
+// alert(table.age)
+// var desk = new Desk(11);
+// alert(desk.name);
+// alert(desk.age);
+
+// function Box(name,age) {
+// 	this.name = name;
+// 	this.age = age;
+// }
+// Box.prototype.run = function() {
+// 	return this.name + this.age;
+// }
+
+// function Pox(p1,p2) {
+// 	this.size = 22;
+// 	Box.call(this,p1,p2);
+// }
+// Pox.prototype = new Box();
+
+// var box = new Box('aa',10);
+// alert(box.name+box.age+box.run()+box.size);
+
+// var pox = new Pox('bb',20);
+// alert(pox.name+pox.age+pox.run()+pox.size); 
+
+
+
+// function Box(urname,urage) {
+// 	this.name = urname;
+// 	this.age = urage;
+// 	this.run = function() {
+// 		return this.name + ' | ' + this.age;
+// 	}
+// }
+
+// function Pox(p1, p2) {
+// 	Box.call(this,p1,p2);
+// }
+
+// var pox = new Pox('aa',12);
+// alert(pox.run());
+
+
+
+
+
+
+
+
+
+
+
 
 
 
