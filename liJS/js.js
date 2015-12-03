@@ -485,12 +485,311 @@ function Desk(para1) {
 // alert(pox.run());
 
 
+// var box = function(){
+// 	return 100;
+// }();
+// alert(box);
+
+
+// function box(){
+// 	return function(){
+// 		return 100;
+// 	}
+// }
+
+// alert(box()());
+
+// var age = 100;
+
+// function box(){
+// 	age++;
+// 	return age;
+// }
+// box();
+// alert(age);	//101
+// box();
+// alert(age);	//102
+// box();
+// alert(age);	//103
+
+// function box() {
+// 	var age = 100;
+// 	age++;
+// 	return age;
+// }
+// alert(box());	//101
+// alert(box());	//101
+// var b = box();
+// alert(b);alert(b);alert(b);
+
+// function box() {
+// 	var age = 100;
+// 	return function() {
+// 		age++;
+// 		return age;
+// 	}
+// }
+
+// var b = box();
+// alert(b());
+// alert(b());
+// alert(b());
+// alert(b());
+// // alert(age);
+// b = null;
+// alert(b);
+
+// (function(age){
+// 	alert(age);
+// })(100);
+
+// var age = 100;
+// function box() {
+// 	age++;
+// 	return age;
+// }
+// alert(box());
+// alert(box());
+// alert(age);
+
+// function box() {
+// 	var age = 100;
+// 	age++;
+// 	return age;
+// }
+
+// alert(box());
+// alert(box());
+// alert(age);
+
+// function box() {
+// 	var age = 100;
+// 	return function() {
+// 		age++;
+// 		return age;
+// 	}
+// }
+
+// var b = box();
+// alert(b());
+// alert(b());
+// alert(b());
+// alert(b());
+// alert(age);
+
+// function box() {
+// 	var arr = [];
+
+// 	for (var i = 0; i < 5; i++) {
+// 		arr[i] = function() {
+// 			return i;
+// 		};		
+// 	}
+
+// 	return arr
+// }
+
+// var b = box();
+
+// for (var i = 0; i < 5; i++) {
+// 	alert(b[i]());
+// };
+
+
+// function box() {
+// 	var arr = [];
+
+// 	for (var i = 0; i < 5; i++) {
+// 		arr[i] = i;	
+// 	}
+
+// 	return arr
+// }
+
+// var b = box();
+
+// for (var i = 0; i < 5; i++) {
+// 	alert(b[i]);
+// };
+
+
+// function box() {
+// 	var arr = [];
+
+// 	for (var i = 0; i < 5; i++) {
+// 		arr[i] = (function() {
+// 			return i;
+// 		})();		
+// 	}
+
+// 	return arr
+// }
+
+// var b = box();
+
+// for (var i = 0; i < 5; i++) {
+// 	alert(b[i]);
+// };
+
+// function box() {
+// 	var arr = [];
+
+// 	for (var i = 0; i < 5; i++) {
+// 		arr[i] = function(num) {
+// 			return function() {
+// 				return num;
+// 			}
+// 		}(i);		
+// 	}
+
+// 	return arr
+// }
+
+// var b = box();
+
+// for (var i = 0; i < 5; i++) {
+// 	alert(b[i]());
+// };
 
 
 
+// function box() {
+// 	var arr = [];
+
+// 	for (var i = 0; i < 5; i++) {
+// 		arr[i] = function(num) {
+// 			return function() {
+// 				return num;
+// 			}
+// 		}(i);
+// 	}
+
+// 	return arr;
+// }
+
+// var b = box();
+// for (var i = 0; i < 5; i++) {
+// 	alert(b[i]());
+// }
+
+
+// var box = {
+// 	getThis : function() {
+// 		return this;
+// 	}
+// };
+
+// alert(this);
+// alert(box.getThis());
+
+// var obj = 'the window';
+
+// var box = {
+// 	obj : 'the box',
+// 	getThis : function() {
+// 		var that = this;
+// 		return function() {
+// 			return that.obj;
+// 		}
+// 	}
+// }
+// alert(this.obj);
+// alert(box.getThis()());
+
+// var obj = 'the window';
+
+// var box = {
+// 	obj : 'the box',
+// 	getThis : function() {
+// 		return function() {
+// 			return this.obj;
+// 		}
+// 	}
+// }
+// alert(this.obj);
+// alert(box.getThis().call(box));
 
 
 
+// function box() {
+// 	(function() {
+// 		for (var i = 0; i < 3; i++) {
+// 			alert(i);
+// 		}
+// 	})();
+	
+// }
+
+// box();
+
+// (function() {
+// 	var age = 100;
+// 	alert(age);
+// });
+
+// function Box() {
+// 	var name = 'bright';
+// 	function run() {
+// 		return name +' is good.';
+// 	}
+
+// 	this.pubGo = function() {
+// 		return name + run();
+// 	}
+// }
+
+// var box = new Box();
+// alert(box.pubGo());
+
+
+// function Box(para) {
+// 	var user = para;
+// 	this.getUser = function() {
+// 		return user;
+// 	}
+// 	this.setUser = function(setValue) {
+// 		return user = setValue;
+// 	}
+// }
+
+// var box = new Box('shao');
+// alert(box.getUser());
+// box.setUser('liang');
+// alert(box.getUser());
+// alert(box.user);	//undefined
+
+
+// var box = function() {
+// 	var age = 100;
+// 	function run() {
+// 		return 'abc';
+// 	}
+
+// 	return {
+// 		pubGo : function() {
+// 			return age + run(); 
+// 		}
+// 	};
+// }();
+
+// alert(box.pubGo());
+// alert(box.age);
+
+
+// var box = function() {
+// 	var person = 'bright';
+// 	function run() {
+// 		return 'My name is ';
+// 	}
+	
+// 	return {
+// 		pubGo : function() {
+// 			return run() + person;
+// 		}
+// 	};
+// }();
+
+// alert(box.pubGo());
 
 
 
